@@ -6,7 +6,7 @@ public class Universo {
     String nombre;
     ArrayList<Escuadron> escuadrones=new ArrayList<Escuadron>();
 
-    public Universo(String nombre, ArrayList<Escuadron> escuadrones) {
+    public Universo(String nombre) {
         this.nombre = nombre;
         this.escuadrones = escuadrones;
     }

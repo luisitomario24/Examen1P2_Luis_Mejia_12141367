@@ -7,8 +7,12 @@ import java.util.Scanner;
 
 public class Principal {
     public static ArrayList<Persona> listapersonas =new ArrayList<Persona>();
+    public static ArrayList<Escuadron>listaescuadrones=new ArrayList<Escuadron>();
+    public static ArrayList<Universo>listauniversos=new ArrayList<Universo>();
+
+
     public static Scanner leer = new Scanner(System.in);
-    
+
     public static void main(String[] args) {
         do{
             opciones( menu() );
@@ -63,7 +67,9 @@ public class Principal {
         if(opcion==8)
             listarEscuadron();
         if(opcion==9)
-            agregarPersona();
+            simularBatalla();
+        if(opcion==10)
+           agregarPersona();
         if(opcion==10)
             modificarpersona();
         if(opcion==11)
@@ -71,18 +77,27 @@ public class Principal {
         if(opcion==12)
             listarPersonas();
 
+
     }
     public static void agregarUniverso(){
-
+        System.out.println("Ingrese el nombre del universo ");
+        String nombre=leer.next();
+        listauniversos.add(new Universo(nombre));
     }
     public static void modificarUniverso (){
-
+        System.out.println("Ingrese la position ");
+        int posicion=leer.nextInt();
+        listauniversos.get(posicion).setNombre(leer.next());
     }
     public static  void borrarUniverso(){
-
+        System.out.println("Ingrese la posicion del universo que desea eliminar" );
+        int posicion=leer.nextInt();
+        listauniversos.remove(posicion);
     }
     public static void listaruniverso(){
-
+        for(Universo universos:listauniversos){
+            System.out.println(universos);
+        }
     }
     public static void agregarescuadron(){
 
@@ -94,6 +109,9 @@ public class Principal {
 
     }
     public static void listarEscuadron(){
+
+    }
+    public static void simularBatalla(){
 
     }
     public static void agregarPersona(){
