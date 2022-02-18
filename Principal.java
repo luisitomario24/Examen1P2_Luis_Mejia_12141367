@@ -100,13 +100,36 @@ public class Principal {
         }
     }
     public static void agregarescuadron(){
+        System.out.println("Ingrese el nombre del escuadron ");
+        String nombre=leer.next();
+        System.out.println("Ingrese el lugar del escuadron ");
+        String lugar=leer.next();
+        System.out.println("Ingrese el nombre de la base ");
+        String base=leer.next();
+        System.out.println("Escriba si ud es Heroe o Villano");
+        String HeroeoVillano=leer.next();
+        Escuadron escuadroncito=new Escuadron(nombre,lugar,base,HeroeoVillano);
+        listaescuadrones.add(escuadroncito);
 
     }
     public static void modificarEscuadron (){
+        System.out.println("Ingrese el escuadron es de heroe o villano ");
+        String HeroeoVillano=leer.next();
+        System.out.println("Ingrese la posicion de la persona en el escuadron");
+        int posicion=leer.nextInt();
+        if(listaescuadrones.get(posicion).getHeroeoVillano( ).equals(HeroeoVillano)){
+            listaescuadrones.get(posicion).setHeroeoVillano("");
+        }
+        else if(1<0){
+            System.out.println("XD");
+        }
+
 
     }
     public static  void borrarEscuadron (){ //
-
+        for(Escuadron escua:listaescuadrones){
+            System.out.println(escua);
+        }
     }
     public static void listarEscuadron(){
 
@@ -115,6 +138,14 @@ public class Principal {
 
     }
     public static void agregarPersona(){
+        System.out.println("Ingrese el nombre de la persona");
+        String nombre=leer.next();
+        System.out.println("Ingrese si es heroe o villano");
+        String HeroeoVillano=leer.next();
+
+        
+
+
 
     }
     public static void modificarpersona(){

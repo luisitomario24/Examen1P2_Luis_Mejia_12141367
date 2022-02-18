@@ -5,19 +5,24 @@ import java.util.ArrayList;
 public class Escuadron {
 
     String nombre,lugar,base;
-    String persona;
-    boolean HeroeoVillano;
+
+    String  HeroeoVillano;
     String lider;
     ArrayList<Persona>miembros=new ArrayList<>();
 
-    public Escuadron(String nombre, String lugar, String base, String persona, boolean heroeoVillano, String lider, ArrayList<Persona> miembros) {
+    public Escuadron(String nombre, String lugar, String base, String HeroeoVillano, String lider) {
         this.nombre = nombre;
         this.lugar = lugar;
         this.base = base;
-        this.persona = persona;
-        HeroeoVillano = heroeoVillano;
+        this.HeroeoVillano = HeroeoVillano;
         this.lider = lider;
-        this.miembros = miembros;
+
+    }
+    public Escuadron(String nombre,String lugar,String base,String HeroeoVillano){
+        this.nombre = nombre;
+        this.lugar = lugar;
+        this.base = base;
+        this.HeroeoVillano = HeroeoVillano;
     }
 
     public String getNombre() {
@@ -44,19 +49,11 @@ public class Escuadron {
         this.base = base;
     }
 
-    public String getPersona() {
-        return persona;
-    }
-
-    public void setPersona(String persona) {
-        this.persona = persona;
-    }
-
-    public boolean isHeroeoVillano() {
+    public String  getHeroeoVillano() {
         return HeroeoVillano;
     }
 
-    public void setHeroeoVillano(boolean heroeoVillano) {
+    public void setHeroeoVillano(String  heroeoVillano) {
         HeroeoVillano = heroeoVillano;
     }
 
@@ -74,7 +71,6 @@ public class Escuadron {
                 "nombre='" + nombre + '\'' +
                 ", lugar='" + lugar + '\'' +
                 ", base='" + base + '\'' +
-                ", persona='" + persona + '\'' +
                 ", HeroeoVillano=" + HeroeoVillano +
                 ", lider='" + lider + '\'' +
                 ", miembros=" + miembros +
