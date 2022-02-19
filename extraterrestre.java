@@ -6,8 +6,8 @@ public abstract class extraterrestre extends Persona {
 
     }
 
-    public extraterrestre(String nombre, String poder, String debilidad, String heroe, String villano, int fuerza, int habilidad_mental, int habilidad_fisica, boolean tieneEscuadron) {
-        super(nombre, poder, debilidad, heroe, villano, fuerza, habilidad_mental, habilidad_fisica, tieneEscuadron);
+    public extraterrestre(String nombre, String poder, String debilidad,String HeroeoVillano ,int fuerza, int habilidad_mental, int habilidad_fisica, boolean tieneEscuadron) {
+        super(nombre, poder, debilidad,HeroeoVillano, fuerza, habilidad_mental, habilidad_fisica, tieneEscuadron);
     }
 
     @Override
@@ -16,8 +16,7 @@ public abstract class extraterrestre extends Persona {
                 "nombre='" + nombre + '\'' +
                 ", poder='" + poder + '\'' +
                 ", debilidad='" + debilidad + '\'' +
-                ", heroe='" + heroe + '\'' +
-                ", villano='" + villano + '\'' +
+
                 ", fuerza=" + fuerza +
                 ", habilidad_mental=" + habilidad_mental +
                 ", habilidad_fisica=" + habilidad_fisica +

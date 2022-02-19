@@ -181,6 +181,9 @@ public class Principal {
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Principal{}";
     }
+}
 
