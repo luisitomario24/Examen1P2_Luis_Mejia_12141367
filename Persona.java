@@ -2,21 +2,30 @@ package Laboratorio5_P2;
 
 public abstract class Persona {
     String  nombre,poder,debilidad,HeroeoVillano;
+    String tipo_persona;
     int fuerza,habilidad_mental,habilidad_fisica;
     boolean tieneEscuadron;
 
     public Persona(){
 
     }
-    public Persona(String nombre, String poder, String debilidad, String HeroeoVillano, int fuerza, int habilidad_mental, int habilidad_fisica, boolean tieneEscuadron) {
+    public Persona(String nombre, String poder, String debilidad, String HeroeoVillano, int fuerza, int habilidad_mental, int habilidad_fisica,boolean tieneEscuadron) {
         this.nombre = nombre;
         this.poder = poder;
         this.debilidad = debilidad;
-        this.HeroeoVillano=HeroeoVillano;
+        this.HeroeoVillano=poder;
         this.fuerza = fuerza;
         this.habilidad_mental = habilidad_mental;
         this.habilidad_fisica = habilidad_fisica;
-        this.tieneEscuadron = tieneEscuadron;
+        this.tieneEscuadron = false;
+    }
+    public Persona(String nombre,String HeroeoVillano,String poder,int fuerza,int habilidad_mental,int habilidad_fisica) {
+        this.nombre = nombre;
+        this.HeroeoVillano=HeroeoVillano;
+        this.poder=poder;
+        this.fuerza=fuerza;
+        this.habilidad_mental = habilidad_mental;
+        this.habilidad_fisica = habilidad_fisica;
     }
 
     public String getNombre() {

@@ -113,7 +113,7 @@ public class Principal {
 
     }
     public static void modificarEscuadron (){
-        System.out.println("Ingrese el escuadron es de heroe o villano ");
+        System.out.println("Ingrese si el escuadron es de heroe o villano ");
         String HeroeoVillano=leer.next();
         System.out.println("Ingrese la posicion de la persona en el escuadron");
         int posicion=leer.nextInt();
@@ -123,16 +123,16 @@ public class Principal {
         else if(1<0){
             System.out.println("XD");
         }
-
-
     }
     public static  void borrarEscuadron (){ //
+        System.out.println("Ingrese la posicion del escuadron");
+        int posicion=leer.nextInt();
+        listaescuadrones.remove(posicion);
+    }
+    public static void listarEscuadron(){
         for(Escuadron escua:listaescuadrones){
             System.out.println(escua);
         }
-    }
-    public static void listarEscuadron(){
-
     }
     public static void simularBatalla(){
 
@@ -143,19 +143,42 @@ public class Principal {
         System.out.println("Ingrese si es heroe o villano");
         String HeroeoVillano=leer.next();
 
-        
+        if(HeroeoVillano.equalsIgnoreCase("heroe")){
+            System.out.println("Ingrese el tipo de persona que ud es ");
+            String tipo_persona=leer.next();
+            if(tipo_persona.equalsIgnoreCase("normal")) {
 
+                System.out.println("Ingrese el poder ");
+                String  poder  = leer.next ();
+                System.out.println("Ingrese el fuerza ");
+                int  fuerza = leer.nextInt ();
+                System.out.println("Ingrese la habilidad mental");
+                int  habilidad_mental=leer.nextInt ();
+                System.out.println("Ingrese la habilidad fisica");
+                int  habilidad_fisica=leer.nextInt ();
+                listapersonas.add(new personaNormal(nombre,HeroeoVillano,poder,fuerza,habilidad_mental,habilidad_fisica));
 
-
+            }
+        }else if(HeroeoVillano.equalsIgnoreCase("Villano")) {
+            System.out.println("Ingrese la debilidad");
+            String debilidad = leer.next();
+        }
     }
     public static void modificarpersona(){
+        System.out.println("Ingrese la posicion de la persona a modificar los atributos");
+        int posicion =leer.nextInt();
+        listapersonas.get(posicion).setNombre(leer.next());
 
     }
     public static void borrarPersona(){
-
+        System.out.println("Ingrese la posicion de la persona que desea eliminar");
+        int posicion =leer.nextInt();
+        listapersonas.remove(posicion);
     }
     public static void listarPersonas(){
-
+        for(Persona perso:listapersonas){
+            System.out.println(perso);
+        }
     }
 
 

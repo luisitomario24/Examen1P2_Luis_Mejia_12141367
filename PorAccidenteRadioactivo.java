@@ -6,8 +6,8 @@ public class PorAccidenteRadioactivo extends Persona {
     String tipoPersona;
 
 
-    public PorAccidenteRadioactivo(String nombre, String poder, String debilidad, String heroe, String villano, int fuerza, int habilidad_mental, int habilidad_fisica, boolean tieneEscuadron) {
-        super(nombre, poder, debilidad, heroe, villano, fuerza, habilidad_mental, habilidad_fisica, tieneEscuadron);
+    public PorAccidenteRadioactivo(String nombre, String poder, String debilidad,String HeroeoVillano, int fuerza, int habilidad_mental, int habilidad_fisica, boolean tieneEscuadron) {
+        super(nombre, poder, debilidad,HeroeoVillano,fuerza, habilidad_mental, habilidad_fisica, tieneEscuadron);
     }
 
     @Override
